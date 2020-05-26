@@ -1,0 +1,39 @@
+/* Mobile Responsive Styling */
+
+/* Mobile Devices: Screen Sizes < 768px */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    height: 120px;
+    padding: 20px;
+  }
+
+  /* navbar links */
+  .navbar a {
+    padding: 10px 10px;
+    margin: 0 3px;
+  }
+
+  /* About section */
+  .flex-items {
+    flex-direction: column;
+  }
+
+  /* Solution section */
+  .flex-columns .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  /* Cases section */
+  .flex-grid .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  /* Team section */
+  .team img {
+    width: 70%;
+  }
+}

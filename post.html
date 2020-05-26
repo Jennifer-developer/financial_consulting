@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add 'Favicon' for the website -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Add 'font awesome' free CDN <link> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+    <!-- Add external CSS file <link> -->
+    <link rel="stylesheet" href="css/lightbox.min.css" />
+    <!-- Add 'css/utilities.css'-->
+    <link rel="stylesheet" href="css/utilities.css" />
+    <!-- Add 'css/mobile.css' -->
+    <link rel="stylesheet" href="css/mobile.css" />
+    <!-- Add 'css/style.css' -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Post One</title>
+  </head>
+
+  <body id="home">
+    <header class="hero blog">
+      <!-- Header: logo -->
+      <div id="navbar" class="navbar top">
+        <h1 class="logo">
+          <span class="text-primary">
+            <i class="fas fa-book-open"> Edge</i></span
+          >
+          Ledger
+        </h1>
+
+        <!-- Header: Navbar -->
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#cases">Cases</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- END 'navbar' Div -->
+
+      <!-- Header: Content -->
+      <div class="content">
+        <h1>Blog</h1>
+      </div>
+    </header>
+    <!-- END 'header' -->
+
+    <!-- Post Page: MAIN Section -->
+    <main>
+      <section class="post">
+        <h2>Blog Post One</h2>
+        <!-- Author: -->
+        <p class="meta">
+          <!-- 'user icon' -->
+          <i class="fas fa-user"></i> Posted by <strong>Jennifer Xie</strong> |
+          April 19 2020
+        </p>
+
+        <!-- image: 'blog1.jpg' -->
+        <img src="images/blog/blog1.jpg" alt="" />
+
+        <!--Add <p> with some wording -->
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae,
+          repellat! Laboriosam sequi molestias sint, pariatur quibusdam fugit
+          aspernatur eligendi fugiat!
+        </p>
+        <!--Add <p> with more wording of 60 -->
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta in
+          tempora facilis illo provident est mollitia accusamus incidunt dolore
+          molestias minima iste, at, similique fugiat neque veritatis
+          voluptatibus tenetur architecto repellendus aperiam eius. Libero velit
+          fugit, assumenda molestias, delectus at aliquid voluptatum sed fugiat
+          suscipit et inventore dolorum! Expedita nihil accusamus ipsa sed, et
+          hic aliquam nostrum officiis quibusdam quasi!
+        </p>
+
+        <!--Add <p> with more wording of 50 -->
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+          cupiditate corrupti perspiciatis numquam, animi illo officiis deleniti
+          molestias aliquid sit repellendus at voluptate porro veniam debitis
+          minus ipsam aliquam harum sapiente enim omnis ut eveniet, iure rerum.
+          Porro saepe aliquam accusamus eligendi explicabo consequatur molestias
+          alias perferendis, corporis minus adipisci.
+        </p>
+      </section>
+      <!--END 'Blog One Section' -->
+    </main>
+    <!-- END 'Post Page: MAIN SECTION' -->
+
+    <!-- FOOTER -->
+    <footer class="footer bg-dark">
+      <!-- Footer: soicial icon links -->
+      <div class="social">
+        <!--1) Facebook icon -->
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <!--2) Twitter icon -->
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <!--3) YouTube icon -->
+        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        <!--4) LinkedIn icon -->
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+      <!-- END 'social' /Div -->
+
+      <!-- Footer: <p> & 'Copyright' -->
+      <p>Copyright &copy; 2020 - EdgeLedger</p>
+    </footer>
+    <!-- END 'Footer' </footer> -->
+
+    <!--JavaScript scripts -->
+    <!--Script: Add jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"
+    ></script>
+    <!-- END jQuery CDN link script -->
+
+    <!-- JavaScript scripts for the image 'lightbox' effect -->
+    <script src="js/lightbox.min.js"></script>
+    <!--END 'lightbox' effect JavaScript script -->
+
+    <!-- JavaScript: Navbar Smooth Scrolling Effect -->
+    <script>
+      const navbar = document.getElementById("navbar");
+      //the 'navbar' top; 'bounce back effect'
+      let scrolled = false;
+
+      window.onscroll = function () {
+        //check where we are on the page, in terms of 'scrolling'
+        if (window.pageYOffset > 100) {
+          // if the window > 100px, then remove the 'navbar' top 'transparent' background style
+          navbar.classList.remove("top");
+          //navbar top 'bounce back effect'
+          if (!scrolled) {
+          }
+          // bring back the 'bouce back effect'
+          setTimeout(function () {
+            // wait 200 mini-secs, bring the 'navbar.style' to 0.,which is the original Y-axis position.
+            navbar.style.transform = "translateY(0)";
+            //then, set the scrolled value to true, since we already scrolled at least once.
+            scrolled = true;
+          }, 200);
+        } else {
+          //if  the window < 100px, we wanna add 'top' [the transparent effect] back
+          navbar.classList.add("top");
+          // else
+          scrolled = false;
+        }
+      };
+
+      // Add Custom jQuery Code for Smooth Scrolling
+      // Smooth Scrolling
+      $("#navbar a, .btn").on("click", function (e) {
+        if (this.hash !== "") {
+          e.preventDefault();
+
+          const hash = this.hash;
+
+          $("html, body").animate({
+            scrollTop: $(hash).offset().top - 100,
+          });
+        }
+      });
+    </script>
+    <!--END 'Navbar Smooth Scrolling effect </script> -->
+  </body>
+</html>
